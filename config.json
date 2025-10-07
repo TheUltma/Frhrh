@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "Cert": "auto",
+    "WANonly": true,
+    "Port": 80,
+    "AliasPort": 443,
+    "WebRTC": true,
+    "TlsOffload": true,
+    "Minify": true
+  },
+  "domains": {
+    "": {
+      "Title": "RyftEngine",
+      "NewAccounts": true
+    }
+  }
+}
