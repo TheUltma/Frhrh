@@ -22,5 +22,13 @@ ENV HOSTNAME=localhost \
     ALLOW_NEW_ACCOUNTS=true \
     TLS_OFFLOAD=true
 
+FROM node:18-alpine
+WORKDIR /opt/meshcentral
+RUN npm install meshcentral
+VOLUME /opt/meshcentral/data
+EXPOSE 8080
+ENV NODE_ENV=production
+CMD ["node", "node_modules/meshcentral"]
+
 # Run MeshCentral
 CMD ["meshcentral"]
